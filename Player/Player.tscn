@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ctgos8xplbifq"]
+
+[ext_resource type="Script" uid="uid://by63sog5wlxc2" path="res://Player/Player.gd" id="1_3qydi"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_4ysp3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3e7le"]
+size = Vector2(59, 96)
+
+[node name="Player" type="CharacterBody2D" unique_id=707717487]
+script = ExtResource("1_3qydi")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1811360296]
+modulate = Color(0.6039216, 0.101960786, 1, 1)
+position = Vector2(29.75, 48.25)
+scale = Vector2(60.5, 97.5)
+texture = SubResource("CanvasTexture_4ysp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1539236053]
+position = Vector2(29.5, 48)
+shape = SubResource("RectangleShape2D_3e7le")
