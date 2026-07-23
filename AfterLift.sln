@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfterLift", "AfterLift.csproj", "{D416575E-E25B-464A-856E-7C7AC5617CDB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D416575E-E25B-464A-856E-7C7AC5617CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D416575E-E25B-464A-856E-7C7AC5617CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D416575E-E25B-464A-856E-7C7AC5617CDB}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{D416575E-E25B-464A-856E-7C7AC5617CDB}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{D416575E-E25B-464A-856E-7C7AC5617CDB}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{D416575E-E25B-464A-856E-7C7AC5617CDB}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

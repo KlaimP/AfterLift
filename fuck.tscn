@@ -2,7 +2,63 @@
 
 [ext_resource type="PackedScene" uid="uid://ctgos8xplbifq" path="res://Player/Player.tscn" id="1_1vjfi"]
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_3e7le"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3e7le"]
+size = Vector2(1152, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vjfi"]
+size = Vector2(98, 649)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1vjfi"]
+
 [node name="Node2D" type="Node2D" unique_id=940681108]
+
+[node name="Arena" type="Node2D" parent="." unique_id=85439942]
+
+[node name="Sprite2D" type="Sprite2D" parent="Arena" unique_id=1022223358]
+modulate = Color(0.23, 0.23, 0.23, 1)
+position = Vector2(576.5, 322.74997)
+scale = Vector2(1151, 646.49994)
+texture = SubResource("CanvasTexture_3e7le")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Arena" unique_id=455389648]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arena/StaticBody2D" unique_id=494707406]
+position = Vector2(578, 37)
+shape = SubResource("RectangleShape2D_3e7le")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Arena/StaticBody2D" unique_id=1100632542]
+position = Vector2(1106, 323.5)
+shape = SubResource("RectangleShape2D_1vjfi")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Arena/StaticBody2D" unique_id=867811522]
+position = Vector2(49, 325)
+shape = SubResource("RectangleShape2D_1vjfi")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Arena/StaticBody2D" unique_id=2104060111]
+position = Vector2(583, 609)
+shape = SubResource("RectangleShape2D_3e7le")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Arena" unique_id=1838179560]
+position = Vector2(578, 610)
+scale = Vector2(1156.5, 75.50001)
+texture = SubResource("CanvasTexture_1vjfi")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Arena" unique_id=178488679]
+position = Vector2(577.75, 37.25)
+scale = Vector2(1156.5, 75.50001)
+texture = SubResource("CanvasTexture_1vjfi")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Arena" unique_id=467210180]
+position = Vector2(48.875, 322.5)
+scale = Vector2(98.249916, 643)
+texture = SubResource("CanvasTexture_1vjfi")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Arena" unique_id=707035905]
+position = Vector2(1106, 324.74997)
+scale = Vector2(100.000015, 650.49994)
+texture = SubResource("CanvasTexture_1vjfi")
 
 [node name="Player" parent="." unique_id=707717487 instance=ExtResource("1_1vjfi")]
 position = Vector2(571, 244)
