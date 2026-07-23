@@ -79,7 +79,6 @@ func dash(direction: Vector2) -> void:
 	await get_tree().create_timer(dash_cooldown).timeout;
 
 	can_dash = true;
-
 	# Я хз, нужна ли нам выносливость, но я оставлю это закомментированным на всякий случай
 	#if current_stamina >= 20:
 	#	current_stamina -= 20
