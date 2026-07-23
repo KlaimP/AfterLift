@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bq8h52nyvv7ui"]
 
 [ext_resource type="PackedScene" uid="uid://ctgos8xplbifq" path="res://Player/Player.tscn" id="1_1vjfi"]
+[ext_resource type="PackedScene" uid="uid://dyvm1yv1rmedi" path="res://Bosses/Boss1/Attacks/boss1.tscn" id="2_ejdi5"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3e7le"]
 
@@ -62,3 +63,7 @@ texture = SubResource("CanvasTexture_1vjfi")
 
 [node name="Player" parent="." unique_id=707717487 instance=ExtResource("1_1vjfi")]
 position = Vector2(571, 244)
+
+[node name="Boss1" parent="." unique_id=846584932 node_paths=PackedStringArray("Player") instance=ExtResource("2_ejdi5")]
+position = Vector2(194, 202)
+Player = NodePath("../Player")

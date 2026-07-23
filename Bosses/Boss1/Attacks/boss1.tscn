@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dyvm1yv1rmedi"]
+
+[ext_resource type="Script" uid="uid://b1amtejcvxnx6" path="res://Bosses/Boss1/Attacks/SpiralAttack.cs" id="1_1logq"]
+[ext_resource type="Script" uid="uid://yusqa8uem3hs" path="res://Bosses/Boss1/Attacks/Boss.cs" id="1_wg6fc"]
+[ext_resource type="Script" uid="uid://cgxmbqpyy8icb" path="res://Bosses/Boss1/Sequencer.cs" id="2_wg6fc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3e7le"]
+size = Vector2(214, 238)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_3e7le"]
+
+[node name="Boss1" type="CharacterBody2D" unique_id=846584932 node_paths=PackedStringArray("Sequencer")]
+script = ExtResource("1_wg6fc")
+Sequencer = NodePath("Sequencer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1278176126]
+position = Vector2(106, 119)
+shape = SubResource("RectangleShape2D_3e7le")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=48524703]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(106.25, 118.75)
+scale = Vector2(213.49998, 238.5)
+texture = SubResource("CanvasTexture_3e7le")
+
+[node name="Sequencer" type="Node2D" parent="." unique_id=1180536190 node_paths=PackedStringArray("Boss", "Attacks")]
+script = ExtResource("2_wg6fc")
+Boss = NodePath("..")
+Attacks = [NodePath("SpiralAttack"), NodePath("SpiralAttack")]
+
+[node name="SpiralAttack" type="Node" parent="Sequencer" unique_id=1960244736]
+script = ExtResource("1_1logq")
+metadata/_custom_type_script = "uid://b1amtejcvxnx6"
