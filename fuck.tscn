@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ctgos8xplbifq" path="res://Player/Player.tscn" id="1_1vjfi"]
 [ext_resource type="PackedScene" uid="uid://dyvm1yv1rmedi" path="res://Bosses/Boss1/Attacks/boss1.tscn" id="2_ejdi5"]
+[ext_resource type="PackedScene" uid="uid://gkl6hrjgllrk" path="res://bullet.tscn" id="3_8yp4s"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3e7le"]
 
@@ -62,8 +63,12 @@ scale = Vector2(100.000015, 650.49994)
 texture = SubResource("CanvasTexture_1vjfi")
 
 [node name="Player" parent="." unique_id=707717487 instance=ExtResource("1_1vjfi")]
-position = Vector2(571, 244)
+position = Vector2(817, 247)
 
 [node name="Boss1" parent="." unique_id=846584932 node_paths=PackedStringArray("Player") instance=ExtResource("2_ejdi5")]
-position = Vector2(194, 202)
+position = Vector2(251, 316)
 Player = NodePath("../Player")
+
+[node name="bullet" parent="." unique_id=418577833 instance=ExtResource("3_8yp4s")]
+position = Vector2(1403, 755)
+rotation = -0.0076029412

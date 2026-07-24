@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://dyvm1yv1rmedi"]
 
-[ext_resource type="Script" uid="uid://b1amtejcvxnx6" path="res://Bosses/Boss1/Attacks/SpiralAttack.cs" id="1_1logq"]
+[ext_resource type="Script" uid="uid://b1amtejcvxnx6" path="res://Bosses/Boss1/Attacks/OneShot.cs" id="1_1logq"]
 [ext_resource type="Script" uid="uid://yusqa8uem3hs" path="res://Bosses/Boss1/Attacks/Boss.cs" id="1_wg6fc"]
 [ext_resource type="Script" uid="uid://cgxmbqpyy8icb" path="res://Bosses/Boss1/Sequencer.cs" id="2_wg6fc"]
+[ext_resource type="Script" uid="uid://b5gr1aliup7oy" path="res://Bosses/Boss1/Attacks/TripleShot.cs" id="4_ewol2"]
+[ext_resource type="Script" uid="uid://dc768i7rrjrb4" path="res://Bosses/Boss1/Attacks/SpiralShot.cs" id="5_xjqy8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3e7le"]
-size = Vector2(214, 238)
+size = Vector2(58, 61)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3e7le"]
 
@@ -14,20 +16,27 @@ script = ExtResource("1_wg6fc")
 Sequencer = NodePath("Sequencer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1278176126]
-position = Vector2(106, 119)
+position = Vector2(-1, 0.5)
 shape = SubResource("RectangleShape2D_3e7le")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=48524703]
 modulate = Color(1, 0, 0, 1)
-position = Vector2(106.25, 118.75)
-scale = Vector2(213.49998, 238.5)
+position = Vector2(-0.4999962, -0.5000038)
+scale = Vector2(61, 65.00001)
 texture = SubResource("CanvasTexture_3e7le")
 
 [node name="Sequencer" type="Node2D" parent="." unique_id=1180536190 node_paths=PackedStringArray("Boss", "Attacks")]
+position = Vector2(-3, 0)
 script = ExtResource("2_wg6fc")
 Boss = NodePath("..")
-Attacks = [NodePath("SpiralAttack"), NodePath("SpiralAttack")]
+Attacks = [NodePath("OneShot"), NodePath("TripleShot"), NodePath("SpiralShot"), NodePath("OneShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("SpiralShot"), NodePath("OneShot"), NodePath("SpiralShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("OneShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("TripleShot")]
 
-[node name="SpiralAttack" type="Node" parent="Sequencer" unique_id=1960244736]
+[node name="OneShot" type="Node" parent="Sequencer" unique_id=1960244736]
 script = ExtResource("1_1logq")
 metadata/_custom_type_script = "uid://b1amtejcvxnx6"
+
+[node name="TripleShot" type="Node" parent="Sequencer" unique_id=2023323929]
+script = ExtResource("4_ewol2")
+
+[node name="SpiralShot" type="Node" parent="Sequencer" unique_id=460424517]
+script = ExtResource("5_xjqy8")
