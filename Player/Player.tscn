@@ -42,7 +42,7 @@
 [sub_resource type="CanvasTexture" id="CanvasTexture_4ysp3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3e7le"]
-size = Vector2(53, 55)
+size = Vector2(43, 43)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2kua3"]
 resource_name = "HitEffect"
@@ -200,3 +200,4 @@ stream = ExtResource("37_ib3vm")
 
 [node name="DieSound" type="AudioStreamPlayer2D" parent="." unique_id=59513393]
 stream = ExtResource("38_vtj8b")
+volume_db = -20.0

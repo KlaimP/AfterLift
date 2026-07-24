@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cgxmbqpyy8icb" path="res://Bosses/Boss1/Sequencer.cs" id="2_wg6fc"]
 [ext_resource type="Script" uid="uid://b5gr1aliup7oy" path="res://Bosses/Boss1/Attacks/TripleShot.cs" id="4_ewol2"]
 [ext_resource type="Script" uid="uid://dc768i7rrjrb4" path="res://Bosses/Boss1/Attacks/SpiralShot.cs" id="5_xjqy8"]
+[ext_resource type="Script" uid="uid://mlp6gl1c4fkw" path="res://Bosses/Boss1/Attacks/CircleShot.cs" id="6_l81qg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3e7le"]
 size = Vector2(58, 61)
@@ -29,7 +30,7 @@ texture = SubResource("CanvasTexture_3e7le")
 position = Vector2(-3, 0)
 script = ExtResource("2_wg6fc")
 Boss = NodePath("..")
-Attacks = [NodePath("OneShot"), NodePath("TripleShot"), NodePath("SpiralShot"), NodePath("OneShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("SpiralShot"), NodePath("OneShot"), NodePath("SpiralShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("OneShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("TripleShot"), NodePath("TripleShot")]
+Attacks = [NodePath("SpiralShot"), NodePath("TripleShot"), NodePath("OneShot"), NodePath("CircleShot"), NodePath("CircleShot"), null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="OneShot" type="Node" parent="Sequencer" unique_id=1960244736]
 script = ExtResource("1_1logq")
@@ -40,3 +41,7 @@ script = ExtResource("4_ewol2")
 
 [node name="SpiralShot" type="Node" parent="Sequencer" unique_id=460424517]
 script = ExtResource("5_xjqy8")
+
+[node name="CircleShot" type="Node" parent="Sequencer" unique_id=911805827]
+script = ExtResource("6_l81qg")
+metadata/_custom_type_script = "uid://mlp6gl1c4fkw"
